@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 var Cita =({cita, eliminarCita})=>(
 
@@ -18,5 +19,13 @@ onClick={()=> eliminarCita(cita.id)}
 
 
 );
+
+
+Cita.prototype= {
+
+cita:PropTypes.object.isRequired,
+eliminarCita:PropTypes.func.isRequired
+
+}
 
 export default Cita;
